@@ -226,4 +226,45 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Sidebar Particles
+   */
+  const sidebarContainer = document.getElementById("sidebar-particles");
+
+  if (sidebarContainer) {
+    function createParticle() {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+
+      // موقعیت افقی تصادفی
+      particle.style.left = Math.random() * 100 + "%";
+
+      // سایز تصادفی بین 4 تا 10 پیکسل
+      const size = Math.random() * 6 + 4;
+      particle.style.width = size + "px";
+      particle.style.height = size + "px";
+
+      // مدت زمان انیمیشن تصادفی
+      particle.style.animationDuration = (Math.random() * 5 + 3) + "s";
+
+      sidebarContainer.appendChild(particle);
+
+      // حذف بعد از انیمیشن
+      setTimeout(() => {
+        particle.remove();
+      }, 8000);
+    }
+
+    // هر 300ms یک پارتیکل جدید
+    setInterval(createParticle, 300);
+  }
+
+
+
+
+
+
+
+
+
 })();
