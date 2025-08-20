@@ -1172,8 +1172,8 @@ section,
 
 /* Contact Section */
 .contact-info p {
-  font-size: 1rem;
-  color: #eee;
+  font-size: 1.5rem;
+  color: #242424;
   margin-bottom: 15px;
 }
 
@@ -1202,7 +1202,7 @@ section,
   width: 44px;
   height: 44px;
   margin: 0 8px;
-  font-size: 20px;
+  font-size: 25px;
   transition: all 0.3s ease;
 }
 
