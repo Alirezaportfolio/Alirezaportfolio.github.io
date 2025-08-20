@@ -1068,13 +1068,13 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
-
 /*--------------------------------------------------------------
-# Contact Section
+# Contact Section - Dark Version
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--dark-background);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #222; /* خاکستری تیره */
+  color: #f5f5f5; /* رنگ متن روشن برای خوانایی */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
 
@@ -1084,14 +1084,10 @@ section,
   }
 }
 
-.contact .info-item {
-  margin-bottom: 40px;
-}
-
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  color: #00bfff; /* رنگ آیکون‌ها */
+  background: rgba(0, 191, 255, 0.1); /* زمینه سبک آیکون‌ها */
   width: 44px;
   height: 44px;
   display: flex;
@@ -1103,28 +1099,30 @@ section,
 }
 
 .contact .info-item h3 {
-  padding: 0;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: #f5f5f5;
 }
 
 .contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
   font-size: 14px;
+  margin-bottom: 0;
+  color: #ddd;
 }
 
 .contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: #00bfff;
+  color: #222;
 }
 
+/* فرم تماس */
 .contact .php-email-form {
-  background-color: var(--surface-color);
+  background-color: #333; /* کمی متفاوت برای تمایز فرم */
+  color: #f5f5f5;
   height: 100%;
   padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 575px) {
@@ -1140,26 +1138,25 @@ section,
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  color: #f5f5f5;
+  background-color: #444;
+  border: 1px solid #555;
 }
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: #00bfff;
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #bbb;
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #fff;
+  background: #00bfff;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -1167,13 +1164,13 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: rgba(0, 191, 255, 0.8);
 }
 
-/* Contact Section */
+/* لینک‌ها و شبکه‌های اجتماعی */
 .contact-info p {
   font-size: 1.5rem;
-  color: #242424;
+  color: #f5f5f5;
   margin-bottom: 15px;
 }
 
@@ -1185,11 +1182,6 @@ section,
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-/* Social Links */
-.social-links {
-  margin-top: 20px;
 }
 
 .social-links a {
