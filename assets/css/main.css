@@ -1071,6 +1071,14 @@ section,
 /*--------------------------------------------------------------
 # Contact Section - Dark Version
 --------------------------------------------------------------*/
+
+contact .info-wrap {
+  background-color: #222 !important;
+  color: #f5f5f5 !important;
+}
+
+
+
 .contact .info-wrap {
   background-color: #222; /* خاکستری تیره */
   color: #f5f5f5; /* رنگ متن روشن برای خوانایی */
