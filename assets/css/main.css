@@ -1071,127 +1071,71 @@ section,
 /*--------------------------------------------------------------
 # Contact Section - Dark Version
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Contact Section - Dark Version
+--------------------------------------------------------------*/
 
-contact .info-wrap {
-  background-color: #222 !important;
-  color: #f5f5f5 !important;
+/* پس‌زمینه کل بخش */
+.contact {
+  background-color: #1a1a1a;
+  padding: 60px 0;
 }
 
+/* عنوان بخش */
+.contact .section-title h2 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 
+.contact .section-title p {
+  color: #ddd;
+  font-size: 1.1rem;
+}
 
+/* باکس اصلی اطلاعات */
 .contact .info-wrap {
-  background-color: #222; /* خاکستری تیره */
-  color: #f5f5f5; /* رنگ متن روشن برای خوانایی */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  background-color: #222;
+  color: #f5f5f5;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 30px;
 }
 
 @media (max-width: 575px) {
   .contact .info-wrap {
-    padding: 20px;
+    padding: 25px;
+    margin-top: 20px;
   }
 }
 
-.contact .info-item i {
-  font-size: 20px;
-  color: #00bfff; /* رنگ آیکون‌ها */
-  background: rgba(0, 191, 255, 0.1); /* زمینه سبک آیکون‌ها */
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
+/* اطلاعات تماس */
+.contact .contact-info p {
+  font-size: 1.2rem;
   color: #f5f5f5;
-}
-
-.contact .info-item p {
-  font-size: 14px;
-  margin-bottom: 0;
-  color: #ddd;
-}
-
-.contact .info-item:hover i {
-  background: #00bfff;
-  color: #222;
-}
-
-/* فرم تماس */
-.contact .php-email-form {
-  background-color: #333; /* کمی متفاوت برای تمایز فرم */
-  color: #181818;
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: #f5f5f5;
-  background-color: #444;
-  border: 1px solid #555;
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #00bfff;
-}
-
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: #bbb;
-}
-
-.contact .php-email-form button[type=submit] {
-  color: #fff;
-  background: #00bfff;
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(0, 191, 255, 0.8);
-}
-
-/* لینک‌ها و شبکه‌های اجتماعی */
-.contact-info p {
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  margin-bottom: 15px;
-}
-
-.contact-info a {
-  color: #00bfff;
-  text-decoration: none;
+  margin-bottom: 20px;
   font-weight: 500;
 }
 
-.contact-info a:hover {
+.contact .contact-info strong {
+  color: #00bfff;
+  font-weight: 600;
+}
+
+.contact .contact-info a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact .contact-info a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
+/* شبکه‌های اجتماعی */
 .social-links a {
   display: inline-flex;
   align-items: center;
@@ -1199,21 +1143,34 @@ contact .info-wrap {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  margin: 0 8px;
-  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  font-size: 24px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links a:hover {
   background: #00bfff;
   color: #1a1a1a;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
 }
 
-
+/* موبایل */
+@media (max-width: 768px) {
+  .social-links a {
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    font-size: 20px;
+  }
+  
+  .contact .contact-info p {
+    font-size: 1rem;
+  }
+}
 
 
 
