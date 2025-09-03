@@ -819,19 +819,24 @@ section,
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 400;
+  padding: 6px 12px; /* فاصله داخلی */
+  font-size: 18px;  /* متن بزرگ‌تر */
+  font-weight: 600; /* ضخیم‌تر */
   margin: 0 10px;
-  line-height: 1;
+  line-height: 1.4;
   text-transform: uppercase;
   margin-bottom: 10px;
+  border-radius: 6px;
   transition: all 0.3s ease-in-out;
 }
 
+/* حالت هاور و انتخاب‌شده */
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  color: #1e90ff;
+  transform: scale(1.1);
+  border: 2px solid #1e90ff;
+  background-color: rgba(30, 144, 255, 0.1);
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -844,8 +849,9 @@ section,
 
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 5px;
+    padding: 4px 8px;
   }
 }
 
