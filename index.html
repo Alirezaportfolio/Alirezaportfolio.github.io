@@ -90,104 +90,34 @@
   </header>
 
   <main class="main">
-
-    <!-- Hero Section -->
-<section id="hero" class="hero section dark-background">
-
-  <!-- Slider Wrapper -->
-  <div class="slider">
-    <div class="slides">
-      <div class="slide active" style="background-image: url('assets/img/slider/010.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/001.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/002.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/003.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/004.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/005.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/006.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/007.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/008.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/009.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/010.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/011.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/012.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/013.webp');"></div>
-      <div class="slide" style="background-image: url('assets/img/slider/014.webp');"></div>
-    </div>
-    <div class="progress-bar"></div>
-  </div>
-
-  <!-- Text Content -->
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <h2>Alireza Delavari</h2>
-    <p>I'm <span class="typed" data-typed-items="Graphic Designer, Motion Graphic Designer, Video Editor, UI/UX Designer">Graphic Designer</span></p>
-  </div>
-
-</section><!-- /Hero Section -->
-
-<style>
-/* Slider Styles */
-.slider {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.slides {
-  position: relative;
-  width: 100%; height: 100%;
-}
-
-.slide {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transform: scale(1);
-  transition: opacity 1s ease, transform 8s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transform: scale(1.05);
-  z-index: 1;
-}
-
-.progress-bar {
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 0%; height: 4px;
-  background: #fff;
-  transition: width 8s linear;
-}
-</style>
-
 <script>
-const slides = document.querySelectorAll('.slide');
-const progressBar = document.querySelector('.progress-bar');
-let currentIndex = 0;
-const slideDuration = 8000; // 8 seconds
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".hero .slide");
+    let current = 0;
+    const interval = 6000; // 6 ثانیه برای هر اسلاید
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    // نمایش اولین اسلاید
+    showSlide(current);
+
+    // تغییر خودکار
+    setInterval(nextSlide, interval);
   });
-  progressBar.style.width = '0%';
-  setTimeout(() => {
-    progressBar.style.transition = `width ${slideDuration}ms linear`;
-    progressBar.style.width = '100%';
-  }, 50);
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-}
-
-setInterval(nextSlide, slideDuration);
-showSlide(currentIndex);
 </script>
+
 
 
     <!-- About Section -->
