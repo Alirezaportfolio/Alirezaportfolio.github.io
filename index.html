@@ -90,33 +90,34 @@
   </header>
 
   <main class="main">
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".hero .slide");
-    let current = 0;
-    const interval = 6000; // 6 ثانیه برای هر اسلاید
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) {
-          slide.classList.add("active");
-        }
-      });
-    }
+  <!-- اسلایدر پس‌زمینه -->
+  <div class="slider">
+    <div class="slide active"><img src="assets/img/slider/slide1.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide2.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide3.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide4.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide5.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide6.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide7.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide8.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide9.webp" alt=""></div>
+    <div class="slide"><img src="assets/img/slider/slide10.webp" alt=""></div>
+  </div>
 
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
+  <!-- متن روی هیرو -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2>Alireza Delavari</h2>
+    <p>I'm <span class="typed" data-typed-items="Graphic Designer, Motion Graphic Designer, Video Editor, UI/UX Designer">Graphic Designer</span></p>
+  </div>
 
-    // نمایش اولین اسلاید
-    showSlide(current);
+  <!-- لودر پایین -->
+  <div class="slider-progress"></div>
 
-    // تغییر خودکار
-    setInterval(nextSlide, interval);
-  });
-</script>
+</section>
+<!-- /Hero Section -->
 
 
 
