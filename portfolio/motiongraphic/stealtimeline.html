@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+  /* تنظیم ظاهر عکس‌های اسلایدر */
+  .portfolio-details .swiper-slide img {
+    width: 100%;
+    height: 500px; /* ارتفاع ثابت برای نظم */
+    object-fit: contain; /* عکس کامل می‌مونه و کشیده نمی‌شه */
+    border-radius: 10px;
+    background-color: #000; /* برای عکس‌های عمودی که فضای خالی دارن */
+  }
+
+  /* اسلایدر رو محدود می‌کنه تا کل عرض صفحه رو نگیره */
+  .portfolio-details-slider {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* چینش صحیح وسط */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* اطمینان از تراز شدن همه عکس‌ها */
+  .swiper-wrapper {
+    align-items: center;
+  }
+</style>
 
 <head>
   <base href="https://alirezadelavari.com/">
@@ -203,8 +231,7 @@ My day-to-day involves brainstorming engaging visual narratives, designing the g
             </div>
           </div>
 
-<iframe src="https://youtube.com/shorts/Wa0epmVsC08" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wa0epmVsC08?si=CbpXG5huDvcyMChq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
